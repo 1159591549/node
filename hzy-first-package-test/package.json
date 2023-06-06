@@ -1,0 +1,9 @@
+{
+  "name": "hzy-first-package",
+  "version": "1.0.0",
+  "description": "自定义使用的包",
+  "main": "index.js",
+  "keywords": ["hzy","first"],
+  "author": "huzhiyao",
+  "license": "ISC"
+}

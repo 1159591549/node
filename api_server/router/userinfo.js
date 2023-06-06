@@ -1,0 +1,10 @@
+const express = require('express')
+const expressJoi = require('@escook/express-joi')
+const { update_userinfo_schema, update_password, update_avatar } = require('../schema/user')
+const router = express.Router()
+const { getUserInfo, updateUserInfo, updatePassword, updateAvatar } = require('../router_handler/userinfo')
+router.get('/getUserInfo', getUserInfo)
+router.post('/updateUserInfo', expressJoi(update_userinfo_schema), updateUserInfo)
+router.post('/updatePassword', expressJoi(update_password), updatePassword)
+router.post('/updateAvatar', expressJoi(update_avatar), updateAvatar)
+module.exports = router
